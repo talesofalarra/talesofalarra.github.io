@@ -1,0 +1,39 @@
+---
+layout: default
+title: Adventure
+---
+
+<div class="container">
+  <div class="page-header">
+    <h1>{{page.title}}</h1>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-3">
+      <div class="sticky-nav-wrapper">
+        <div class="sticky-nav" data-spy="affix" data-offset-top="117" data-offset-bottom="200">
+          {% include list-sessions.html %}
+          <a href="#" class="btn btn-default btn-block back-to-top">Back to top</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h3>Introduction</h3>
+        <p>It has been a century since the immortal witch Baba Yaga last visited the world, and the hour draws nigh for her return. But when she fails to appear in the frozen realm of Irrisen to usher in its newest ruler, pockets of winter begin to grow throughout the Inner Sea region. After 1,400 years of perpetual winter, the icy curse of Irrisen is spreading! What links do these strange blizzards and swaths of wintry landscapes have with Irrisen, and is there any truth to the growing rumors that the Witch Queen Elvanna has taken full control of the realm? Can her plans for the Inner Sea be thwarted, or will the Reign of Winter engulf the world?</p>
+      </div>      
+      {% for post in site.posts %}
+        {% if {{post.category}} == 'session' %}
+          <div id="session-{{post.session}}" class="anchor">
+            <h3>{{post.title}}</h3>
+            {{post.teaser}}
+            <a href="{% if site.github.url contains 'tmurrow.github.io' %}{{site.github.url}}{% endif %}{{post.url}}">Read more...</a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>

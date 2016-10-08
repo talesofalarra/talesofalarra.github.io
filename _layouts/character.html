@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="container">
+
+    <div class="page-header">
+        <h1>{{page.name}}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-responsive" src="{{site.github.url}}/images/{{page.picture}}" />
+        </div>
+        <div class="col-md-8">
+            <blockquote>
+                <p class="{{page.quoteAuthor}}-font">"{{page.quote}}"</p>
+                <footer>{{page.quoteAuthor}}</footer>
+            </blockquote>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>Full Name: {{page.fullName}}</p>
+                    <p>Race: {{page.race}}</p>
+                    <p>Class: {{page.class}}</p>
+                    <p>Alignment: {{page.alignment}}</p>
+                    <p>Player: <a href="{{site.github.url}}/players.html#{{page.player}}"><span class="label label-primary">{{page.player}}</span></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p>{{content}}</p>
+    </div>
+
+    <a href="{{site.github.url}}/party.html" class="btn btn-default">Back to Party Members</a>
+
+</div>

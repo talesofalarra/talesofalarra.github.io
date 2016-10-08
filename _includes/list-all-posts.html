@@ -1,0 +1,5 @@
+<div class="list-group fixed">
+{% for post in site.posts %}
+  <a href="{% if site.github.url contains 'tmurrow.github.io' %}{{site.github.url}}{% endif %}{{post.url}}" class="list-group-item">{{post.title}}</a>
+{% endfor %}
+</div>

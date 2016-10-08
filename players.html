@@ -1,0 +1,78 @@
+---
+layout: default
+title: Players
+---
+
+<div class="container">
+    <div class="page-header">
+        <h1>Players</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+          {% for player in site.players %}
+          {% if {{player.status}} == 'DM' %}
+          <div class="player-anchor" id="{{player.name}}"></div>
+          <div class="panel panel-default">
+              <div class="panel-body">
+
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="{{site.github.url}}/images/{{player.avatar}}" class="img-responsive" alt="Responsive image">
+                  </div>
+                  <div class="col-md-10">
+                    <h3>{{player.name}} <span class="badge badge-primary">DM</span></h3>
+                    <p>Characters:
+                      {% for char in site.characters %}
+                        {% if {{char.player}} == {{player.name}} %}
+                          <a href="{{site.github.url}}/characters/{{char.name}}.html"><span class="label {% if {{char.status}} == 'dead' %}label-danger{% elsif {{char.type}} == 'NPC' %}label-default{% else %}label-success{% endif %}">{{char.name}}</span></a>
+                        {% endif %}
+                        {% if {{char.player}} == {{player.status}} %}
+                          <a href="{{site.github.url}}/characters/{{char.name}}.html"><span class="label {% if {{char.status}} == 'dead' %}label-danger{% elsif {{char.type}} == 'NPC' %}label-default{% else %}label-success{% endif %}">{{char.name}}</span></a>
+                        {% endif %}
+                      {% endfor %}
+                    </p>
+                    <p>{{player.content}}</p>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+            {% for player in site.players %}
+            {% if {{player.status}} != 'DM' %}
+            <div class="player-anchor" id="{{player.name}}"></div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img src="{{site.github.url}}/images/{{player.avatar}}" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="col-md-10">
+                      <h3>{{player.name}}</h3>
+                      <p>Characters:
+                        {% for char in site.characters %}
+                          {% if {{char.player}} == {{player.name}} %}
+                            <a href="{{site.github.url}}/characters/{{char.name}}.html"><span class="label {% if {{char.status}} == 'dead' %}label-danger{% elsif {{char.type}} == 'NPC' %}label-default{% else %}label-success{% endif %}">{{char.name}}</span></a>
+                          {% endif %}
+                          {% if {{char.player}} == {{player.status}} %}
+                            <a href="{{site.github.url}}/characters/{{char.name}}.html"><span class="label {% if {{char.status}} == 'dead' %}label-danger{% elsif {{char.type}} == 'NPC' %}label-default{% else %}label-success{% endif %}">{{char.name}}</span></a>
+                          {% endif %}
+                        {% endfor %}
+                      </p>
+                      <p>{{player.content}}</p>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!--.container-->

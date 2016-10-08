@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{site.github.url}}/">Test Campaign</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li {% if {{page.title}} contains 'Adventure' %}class="active"{% endif %}><a href="{{site.github.url}}/adventure.html">Adventure</a></li>
+        <li {% if {{page.title}} contains 'Journals' %}class="active"{% endif %}><a href="{{site.github.url}}/journals.html">Journals</a></li>
+        <li {% if {{page.title}} contains 'Party' %}class="active"{% endif %}><a href="{{site.github.url}}/party.html">Party</a></li>
+        <li {% if {{page.title}} contains 'Graveyard' %}class="active"{% endif %}><a href="{{site.github.url}}/graveyard.html">Graveyard</a></li>
+        <li {% if {{page.title}} contains 'Setting' %}class="active"{% endif %}><a href="{{site.github.url}}/setting.html">Setting</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li {% if {{page.title}} contains 'About' %}class="active"{% endif %}><a href="{{site.github.url}}/about.html">About</a></li>
+        <li {% if {{page.title}} contains 'Players' %}class="active"{% endif %}><a href="{{site.github.url}}/players.html">Players</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

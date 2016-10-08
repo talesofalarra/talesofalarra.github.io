@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="page-header">
+    <h1>{{page.title}}</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+
+      {% for post in site.posts %}
+        {% if {{post.author}} == {{page.author}} %}
+          <a href="#session-{{post.session}}" class="list-group-item">{{post.title}}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% for post in site.posts %}
+        {% if {{post.author}} == {{page.author}} %}
+          <div id="session-{{post.session}}" class="anchor">
+            <h3>{{post.title}}</h3>
+            {{post.content}}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <a href="{{site.github.url}}/journals.html" class="btn btn-default">Back</a>
+
+</div>

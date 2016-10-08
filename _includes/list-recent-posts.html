@@ -1,0 +1,5 @@
+<div class="list-group fixed">
+  {% for post in site.posts limit: 5 %}
+  <a href="#session-{{post.session}}" class="list-group-item">{{post.title}}</a>
+{% endfor %}
+</div>

@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  {% include banner.html %}
+
+  <div class="row row-home">
+    <div class="col-sm-12">
+      <h1 class="content-header">Most Recent Adventure</h1>
+      <div class="row">
+        
+        <div class="col-sm-4">
+          <h4>This Week's Posts</h4>
+          <div class="list-group fixed">
+            {% for post in site.categories['session'] limit:1 %}
+              {% assign current-session = post.session %}
+            {% endfor %}
+            {% assign no-posts = true %}
+          {% for post in site.categories['journal'] %}
+            {% if post.session == current-session %}
+            {% assign no-posts = false %}
+              <a href="{% if site.github.url contains 'tmurrow.github.io' %}{{site.github.url}}{% endif %}{{post.url}}" class="list-group-item">{{post.title}}</a>
+            {% endif %}
+          {% endfor %}
+          {% if no-posts == true %}
+          <a href="" class="list-group-item disabled">No posts for this week yet</a>
+          {% endif %}
+          </div>
+        </div>
+        
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% for post in site.categories['session'] limit:1 %}
+                <h3>{{post.title}}</h3>
+                {{post.teaser}}
+                <br><a href="{% if site.github.url contains 'tmurrow.github.io' %}{{site.github.url}}{% endif %}{{post.url}}" class="btn btn-primary">Read more...</a>
+              {% endfor %}
+            </div>
+          </div>          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="row row-home">
+    <div class="col-sm-12">
+      {% include quotes-carousel.html %}
+    </div>
+  </div>
+  
+  <div class="row row-home">
+    <div class="col-sm-12">
+      <div class="meet-the-party">
+        <img src="{{site.github.url}}/images/character-banner.jpg" class="img-responsive">
+        <!-- http://dnd.wizards.com/sites/default/files/media/styles/hubpage_banner/public/07_LATEST-STORY_Generic_subsection_hero_140714_0.jpg?itok=6cB8aN6_ -->
+        <div class="meet-the-party-content">
+          <p class="header-font">The band of adventurers who have decided to take on this daring and dangerous quest.</p>
+          <a href="{{site.github.url}}/party.html" class="btn btn-primary">Meet the party <span class="glyphicon glyphicon-chevron-right glyphicon-sm"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>About us</h4>
+          <p>Cupcake ipsum dolor sit amet dragée. Sweet roll cotton candy lollipop soufflé bonbon cake sesame snaps ice cream.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

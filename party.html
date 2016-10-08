@@ -1,0 +1,62 @@
+---
+layout: default
+title: Party
+---
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>Party Members</h1>
+    </div>
+    <div id="character-list">
+        <div class="character-results">
+            <div class="characters">
+
+                {% for char in site.characters %}
+                {% if {{char.type}} == 'PC' and {{char.status}} == 'alive' %}
+                <a href="{{site.github.url}}/characters/{{char.name}}.html" class="character">
+                    <div>
+                        <div class="thumbnail character-thumbnail">
+                            <img class="img-responsive" width="75" src="{{site.github.url}}/images/{{char.avatar}}" />
+                            <div class="caption text-center">
+                                <h3>{{char.name}}</h3>
+                                <p>{{char.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1>Significant NPCs</h1>
+    </div>
+    <div id="character-list">
+        <div class="character-results">
+            <div class="characters" id="sortable2">
+
+              {% for char in site.characters %}
+              {% if {{char.type}} == 'NPC' and {{char.status}} == 'alive' %}
+              <a href="{{site.github.url}}/characters/{{char.name}}.html" class="character">
+                  <div>
+                      <div class="thumbnail character-thumbnail">
+                          <img class="img-responsive" width="75" src="{{site.github.url}}/images/{{char.avatar}}" />
+                          <div class="caption text-center">
+                              <h3>{{char.name}}</h3>
+                              <p>{{char.description}}</p>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              {% endif %}
+              {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+</div>

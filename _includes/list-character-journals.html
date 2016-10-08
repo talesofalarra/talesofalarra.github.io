@@ -1,0 +1,7 @@
+<div class="list-group fixed">
+{% for char in site.characters %}
+  {% if {{char.type}} == 'PC' %}
+    <a href="{{site.github.url}}/journals/{{char.name}}Journal.html" class="list-group-item">{{char.name}}'s Journal</a>
+  {% endif %}
+{% endfor %}
+</div>
