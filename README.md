@@ -1,6 +1,6 @@
 # Tales of Alarra
 
-###_Tales of Alarra campaign website_
+###_Website for the homebrew D&D campaign setting, Tales of Alarra_
 
 Website: https://talesofalarra.github.io/  
 Local: http://localhost:4001/
