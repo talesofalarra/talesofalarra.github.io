@@ -1,8 +1,8 @@
-# Test Campaign
+# Tales of Alarra
 
-###_Test/mock-up website for a D&D campaign_
+###_Tales of Alarra campaign website_
 
-Website: http://tmurrow.github.io/test-campaign/  
+Website: https://talesofalarra.github.io/  
 Local: http://localhost:4001/
 
 - _Port number set in_ `_config.yml`
