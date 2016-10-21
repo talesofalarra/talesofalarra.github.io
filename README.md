@@ -29,13 +29,13 @@ Adventure
        - Journals by character/all journals
  - Characters
     - Party link
-	- list of characters
+       - List of characters
     - Graveyard link
-	- list of characters
+       - List of characters
  - Setting
 
 About
- - About
+ - Info
  - Players list
     - Corbin
     - Tanya
