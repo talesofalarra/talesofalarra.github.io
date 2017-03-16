@@ -1,6 +1,6 @@
 # Tales of Alarra
 
-###_Website for the homebrew D&D campaign setting, Tales of Alarra_
+### _Website for the homebrew D&D campaign setting, Tales of Alarra_
 
 Website: https://talesofalarra.github.io/  
 Local: http://localhost:4001/
@@ -8,16 +8,16 @@ Local: http://localhost:4001/
 - _Port number set in_ `_config.yml`
 
 Fonts:
-####Meddon - Tales of Alarra
+#### Meddon - Tales of Alarra  
 `<link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">`  
-`font-family: 'Meddon', cursive;`
-####Alex Brush or Dancing Script - Ella
+`font-family: 'Meddon', cursive;`  
+#### Alex Brush or Dancing Script - Ella  
 `font-family: 'Alex Brush', cursive;`  
-`font-family: 'Dancing Script', cursive;`
-####Allura or Kristi or Yesteryear - Conrin
+`font-family: 'Dancing Script', cursive;`  
+#### Allura or Kristi or Yesteryear - Conrin  
 `font-family: 'Allura', cursive;`  
 `font-family: 'Kristi', cursive;`  
-`font-family: 'Yesteryear', cursive;`
+`font-family: 'Yesteryear', cursive;`  
 
 ---
 ## Layout
